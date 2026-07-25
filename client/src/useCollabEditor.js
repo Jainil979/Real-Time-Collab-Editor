@@ -4,7 +4,7 @@ import { applyOperation, transform, transformCursor } from './transform';
 import { diffToOperations } from './diffUtils';
 import { getClientColor } from './utils';
 
-const WS_URL = 'ws://localhost:3001';
+const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:3001';
 const MAX_RETRIES = 5;
 const BASE_DELAY_MS = 2000;
 
